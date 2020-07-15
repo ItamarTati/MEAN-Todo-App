@@ -24,7 +24,6 @@ exports.create = (req, res) => {
         title: req.body.title,
         description: req.body.description,
         hasEnded: req.body.hasEnded,
-        timestamps: req.body.timestamps,
     });
     todo.save()
       .then(data => {
@@ -65,7 +64,6 @@ exports.create = (req, res) => {
         title: req.body.title,
         description: req.body.description,
         hasEnded: req.body.hasEnded,
-        timestamps: req.body.timestamps,
     }, {new: true})
     .then(todo => {
      if(!todo) {
